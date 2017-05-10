@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>KU Film Festival</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="icons/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/social.css">
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<body>
+
+    <aside id="sticky-social">
+        <ul>
+            <li>
+                <a href="https://twitter.com/KuTheaterClub" class="entypo-twitter" target="_blank"><img id="twitterIcon" src="icons/twitter.png" /><span>Twitter</span></a>
+            </li>
+            <li>
+                <a href="#foot" class="entypo-email" target=""><img id="emailIcon" src="icons/email.png" /><span>Email</span></a>
+            </li>
+        </ul>
+    </aside>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand" id="title">KU Film Festival</a>
+                <button class="navbar-toggle" data-toggle="collapse" data-target="#navHeaderCollapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navHeaderCollapse">
+                <ul class="nav navbar-nav navbar-right" id="navigation">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li id="menuRegister"><a href="#register">Register</a></li>
+                    <li><a href="#deadlines">Deadlines</a></li>
+                    <li><a href="#rules">Rules</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#foot">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid regFluidCont">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <button type="button" class="regButton" onclick="regBtnClick()">Register Now</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="regParagraph">
+                        <h1>"I'm going to make you an offer you can't refuse"</h1>
+                        <h4>-The Godfather</h4><br>
+                        <p>Press that red button and get ready to inspire!<br> "Camera rolling and ACTION!", those are your words now because its finally time for your vision to take its first breath into reality. Come on open your dreamland gates and let
+                            us enjoy that beautiful mind of yours! Register now and make that first "ACTION"!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid overviewFluidCont" id="about" hidden>
+        <div class="container" id="overviewCont">
+            <div class="row">
+                <h1 class="divTitle overviewTitle">نبذة عن مهرجان الأفلام 2</h1>
+                <p id="overview" dir="rlt">
+
+                    مهرجان الأفلام 2 هو مهرجان يقيمه نادي المسرح والمواهب في جامعة خليفة، والذي يتضمن عرض لأفلام تتراوح مدتها من 5 إلى 7 دقائق، جميع الأفلام المعروضة هي من إنتاج طلبة الجامعة، كما إن هذه الأفلام تحمل رسائل الطلاب للمجتمع وتناقش قضايا تهم فئة الشباب <br>كذلك
+                    يتضمن المهرجان عرض لمسرحية واقعية فكاهية تهتم بشؤون الطلبة و حياتهم<br>وفي ختام المهرجان يتم تتويج أفضل فلم حسب تصويت الجمهور ولجنة التحكيم
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid deadlinesFluidCont" id="deadlines">
+        <div class="container" id="deadlineCont">
+            <div class="row">
+                <h1 class="divTitle" id="deadlinesTitle">Deadlines</h1>
+                <dl>
+                    <dt class="deadline-title">Tuesday, 24<sup>th</sup> of January 2017</dt>
+                    <dd class="deadline-desc">Last day for registration in the KU film festival</dd>
+                    <dd class="deadline-desc deadline-timeleft" id="first-deadline"></dd>
+                    <br><br>
+                    <dt class="deadline-title">Monday, 27<sup>th</sup> of February 2017</dt>
+                    <dd class="deadline-desc">Last day to submit your finished movies</dd>
+                    <dd class="deadline-desc deadline-timeleft" id="second-deadline"></dd>
+                    <br><br>
+                    <dt class="deadline-title">Wednesday, 5<sup>th</sup> of April 2017</dt>
+                    <dd class="deadline-desc">The Film Festival</dd>
+                    <dd class="deadline-desc deadline-timeleft" id="third-deadline"></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid rulesFluidCont" id="rules">
+        <div class="container" id="rulesCont">
+            <div class="row">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1 class="divTitle">Terms and Conditions</h1>
+                        <dl class="rulesList">
+                            <dt>Number of team members</dt>
+                            <dd>A team must contain a minimum of 4 members, a Director, a Writer, a Cameraman, and an Editor, all of which must be KU students.</dd><br>
+                            <dt>Movie duration</dt>
+                            <dd>Submitted movies must be 5 to 7 minutes in length.</dd><br>
+                            <dt>Actors and Extras</dt>
+                            <dd>It is absolutely prohibited to have main actors who are not current KU students.</dd><br>
+                            <dt>Content</dt>
+                            <dd>The content of the submitted movies must adhere to the traditions of the UAE and to the teachings of the religion of Islam.</dd><br>
+                            <dt>Copyrights</dt>
+                            <dd>The KU Theater Club has the right to use the submitted movies in other later events.</dd><br>
+                        </dl>
+                    </div>
+                    <div class="col-sm-6" dir="rtl" hidden>
+                        <h1 class="divTitle">الشروط والأحكام</h1>
+                        <dl class="rulesList-ar rulesList">
+                            <dt>عدد أعضاء الفريق</dt>
+                            <dd>يجب أن يتكون الفريق من 4 أعضاء على الأقل، من ضمنهم مخرج وكاتب و مصور ومحرر أفلام، ويجب أن يكون جميع الأعضاء طلبة في جامعة خليفة.</dd><br>
+                            <br><dt>مدة الأفلام</dt>
+                            <dd>يجب أن لاتقل مدة الفلم المشارك عن 5 دقائق ولا تزيد عن 7 دقائق.</dd><br>
+                            <dt>الممثلين</dt>
+                            <dd>يمنع منعا باتاً الإستعانة بممثلين من خارج جامعة خليفة كممثلين رئيسين.</dd><br><br>
+                            <dt>المحتوى</dt>
+                            <dd>يجب أن يتوافق محتوى الأفلام المشاركة مع عادات وتقاليد دولة الإمارات العربية المتحدة وتعاليم الدين الإسلامي.</dd><br>
+                            <dt>حقوق النشر</dt>
+                            <dd>يمتلك نادي المسرح والمواهب في جامعة خليفة الحق في إستخدام الأفلام المشاركة في فعاليات أخرى.</dd><br>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="container" id="signatureFluidCont">
+            <br><br>
+            <h4 class="sahmParagraph">With the Support of</h4>
+            <img id="sahmLogo" src="backgrounds/SHM.png">
+            <p class="sahmParagraph">We will gladly offer all contestants all the help and guidance they may need. If you have any questions regarding the process of filmmaking, or you feel hesitant to participate, contact us and we will be happy to help you.</p>
+            <div class="row">
+                <img id="sahm-contact" src="icons/contact.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="container" id="askFluidCont">
+          <br>
+            <h1>Any Questions?</h1>
+            <p>If we didn't answer, ask again. Because why not?!</p>
+            <form class="form-inline askForm" style="width: 100%" method="post">
+              <input type="number" class="form-control" name="senderID" id="senderID" placeholder="Your University ID" min="100030000" max="100049999" required>
+              <input type="text" class="form-control" name="senderQuestion" id="senderQuestion" placeholder="Ask whatever you want..." maxlength="200" required>
+              <button type="submit" class="btn btn-default btn-primary" id="askBtn">Ask</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container-fluid formFluidCont" id="register">
+        <div class="container">
+            <div class="row" id="formsContainer">
+                <div class="col-sm-6" id="teamForm">
+                    <h1 class="divTitle">Register as a Team</h1>
+                    <form method="post" class="registrationForm">
+                        <div class="form-group">
+                            <label for="directorName">Movie Director</label>
+                            <input type="text" class="form-control" name="directorName" id="directorName" placeholder="Director Name" maxlength="26" required>
+                            <input type="number" class="form-control" name="directorID" id="directorID" placeholder="Director University ID" min="100030000" max="100049999" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="writerName">Movie Writer</label>
+                            <input type="text" class="form-control" name="writerName" id="writerName" placeholder="Writer Name" maxlength="26" required>
+                            <input type="number" class="form-control" name="writerID" id="writerID" placeholder="Writer University ID" min="100030000" max="100049999" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editorName">Movie Editor</label>
+                            <input type="text" class="form-control" name="editorName" id="editorName" placeholder="Editor Name" maxlength="26" required>
+                            <input type="number" class="form-control" name="editorID" id="editorID" placeholder="Editor University ID" min="100030000" max="100049999" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="videographerName">Movie Videographer</label>
+                            <input type="text" class="form-control" name="videographerName" id="videographerName" placeholder="Videographer Name" maxlength="26" required>
+                            <input type="number" class="form-control" name="videographerID" id="videographerID" placeholder="Videographer University ID" min="100030000" max="100049999" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="genre">Movie Genre</label>
+                            <input type="text" class="form-control" name="genre" id="genre" placeholder="Comedy, Horror, etc." maxlength="20" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Desc">A Short Description about your short movie</label>
+                            <textarea class="form-control" name="Desc" id="Desc" rows="3" name="desc" maxlength="2000" required></textarea>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                              <input class="form-check-input" type="checkbox" required>
+                              I agree to the <a href="#rules">Terms and Conditions</a> of this competition
+                            </label>
+                        </div>
+                        <button type="submit" id="regTeamBtn" class="btn btn-primary btn-lg formRegBtn">Register Team</button>
+                    </form>
+                </div>
+                <div class="col-sm-6" id="individualForm">
+                    <h1 class="question">You don't have a team?</h1>
+                    <h1 class="divTitle">Register as an Individual</h1>
+                    <h1 class="rest">and we will find you a team</h1>
+                    <form method="post" class="registrationForm">
+                        <div class="form-group">
+                            <label for="inputName">First Name</label>
+                            <input type="text" class="form-control" id="inputName" placeholder="Enter your name" name="inputName" maxlength="16" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputId">University ID</label>
+                            <input type="number" class="form-control" id="inputId" name="inputId" placeholder="Enter your University ID" min="100030000" max="100049999" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputRole" style="margin-bottom: -20px;">Prefered Role</label>
+                            <div class="radio">
+                                <label><input type="radio" name="inputRole" value="Actor" required>Actor</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="inputRole" value="Cameraman" required>Cameraman</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="inputRole" value="Editing" required>Editing/Montage</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="inputRole" id="otherchkbx" value="" required>other</label>
+                                <input type="text" id="inputOther" class="form-control" placeholder="Please specify other" maxlength="16" disabled>
+                            </div>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                              <input class="form-check-input" type="checkbox" required>
+                              I agree to the <a href="#rules">Terms and Conditions</a> of this competition
+                            </label>
+                        </div>
+                        <button type="submit" id="regIndividualBtn" class="btn btn-primary btn-lg formRegBtn">Register Individual</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer" id="foot">
+        <div class="container">
+            <hr>
+            <div class="row">
+                <div class="col-sm-6 col-sm-push-6 text-right ">
+                    <br>
+                    <p id="email">Our Email: <strong>theaterclubauh@kustar.ac.ae</strong></p>
+                </div>
+                <div class="col-sm-6 col-sm-pull-6" id="footerDesc">
+                    <strong>Khalifa University Film Festival Website - Spring 2017</strong><br>
+                    <span style="font-size: 12px;">Website designed by Sultan Abu Ghazal<br>&copy Copyright 2017</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
